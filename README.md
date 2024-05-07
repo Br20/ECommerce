@@ -10,7 +10,7 @@ E-Commerce developed for diploma of Professional FullStack Developer at UTN E-Le
 - Extra: Si se agrega más de una unidad del mismo producto, debemos mostrar una sola vez la descripción pero el precio y la cantidad deben estar indicados.
 - Extra: Persistencia del carrito en el navegador o base de datos.
 - Debe ser posible eliminar los productos del carrito.
-- Filtrar por precio más alto, precio límite. X
-- Buscador por título, nombre o como se llame en la API ese campo. x
-- Ordenar por precio mayor a menor y viceversa. x
+- Filtrar por precio más alto, precio límite. 
+- Buscador por título, nombre o como se llame en la API ese campo. 
+- Ordenar por precio mayor a menor y viceversa. 
 - Extra: BAAS -> Login y Registro Firebase o lo que pinte.

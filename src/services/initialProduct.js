@@ -1,4 +1,4 @@
-export const intialProduct = {
+export const initialProduct = {
     id:0,
     title:'',
     price:'',
