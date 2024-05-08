@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Login = () => {
   return (
     <div className="login-container">
-        <form action={(e) => e.eventPrevent}>
+        <form action="">
             <label htmlFor="">Email</label>
             <input type="text"/>
             <label htmlFor="">Password</label>
