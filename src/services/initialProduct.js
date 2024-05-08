@@ -4,5 +4,5 @@ export const initialProduct = {
     price:'',
     category:'',
     description:'',
-    image:''
+    image:'https://cdn-icons-png.flaticon.com/512/18/18505.png'
 }

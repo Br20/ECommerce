@@ -8,6 +8,8 @@ export const ProductContextProvider = ({children}) => {
     const [error, setError] = useState(null)
     useEffect (()=> {
       setIsLoading(true)
+      console.log("cargando..")
+      console.log(products)
       setError(null)
       fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
