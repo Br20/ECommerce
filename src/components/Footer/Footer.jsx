@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <footer>
-      <p>Esto es un footer</p>
+      <p>© 2024 Brian Nicolás lugo</p>
     </footer>
   )
 };
