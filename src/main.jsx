@@ -15,11 +15,13 @@ import { UserContextProvider } from './context/UserContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <ProductContextProvider>
       <UserContextProvider>
-        <ProductContextProvider>
+
           <App />
-        </ProductContextProvider>
+
       </UserContextProvider>
+      </ProductContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

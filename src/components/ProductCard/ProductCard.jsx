@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
         <Link to={"/products/"+product.id} onClick={handleClick}>{product.title}</Link>
         <img src={product.image} alt={product.title}/>
         <p>${product.price}</p>
-        {user && <button onClick={()=>addToCart(product)}>Add to Cart</button>}
+        {user && <button onClick={()=>addToCart(product, user)}>Add to Cart</button>}
     </article>
   )
 };

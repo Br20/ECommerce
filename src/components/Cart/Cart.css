@@ -4,3 +4,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.EmptyCart{
+    font-size: 30px;
+}
+
+.EmptyCart-msg{
+    font-size: 25px;
+}

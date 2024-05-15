@@ -1,5 +1,5 @@
 import React ,{ useEffect, useState, createContext} from "react";
-import { initialProduct } from "../services/initialProduct"
+import { initialProduct, getStoredCart } from "../services/initialProduct"
 export const productContext = createContext([initialProduct]);
 
 export const ProductContextProvider = ({children}) => {
@@ -8,7 +8,7 @@ export const ProductContextProvider = ({children}) => {
     const [error, setError] = useState(null)
     const [sortedAsc, setSortedAsc] = useState(false)
     const [query, setQuery] = useState("")
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(getStoredCart())
 
     const handleSort = () => {
       sortedAsc ? setProducts(products.toSorted((a,b) => a.price - b.price)): setProducts(products.toSorted((a,b) => b.price - a.price))
@@ -17,28 +17,35 @@ export const ProductContextProvider = ({children}) => {
 
     const handleQuery = (inputQuery) => setQuery(inputQuery)
 
-    const addToCart = (newProduct) => {
+    const addToCart = (newProduct, user) => {
       const index = cart.findIndex((item) => item.product.id === newProduct.id);
       let quantity = 1
-      let copyCart = cart
+      let copyCart = [...cart]
       if (index !== -1) {
-        const itemToChange = copyCart.splice(index,1)[0]
+        const itemToChange = copyCart[index];
         quantity = itemToChange.quantity + 1
+        copyCart[index] = { ...itemToChange, quantity };
+      }else{
+        copyCart.push({ product: newProduct, quantity: 1 });
       }
-      copyCart.push({product:newProduct,quantity:quantity})
+      window.localStorage.setItem(user+"cart", JSON.stringify(copyCart))
       setCart(copyCart)
     }
 
-    const removeToCart = (productIdToRemove) => {
+    const removeToCart = (productIdToRemove, user) => {
       const index = cart.findIndex((item) => item.product.id === productIdToRemove);
-      console.log("a eliminar id: "+ productIdToRemove)
-      console.log(cart[index].quantity-1)
-      if (cart[index].quantity === 1)
+      if (cart[index].quantity === 1){
         setCart(cart.filter((prod) => prod.product.id != productIdToRemove))
+      }
       else{
         const copyCart = cart.filter((prod) => prod.product.id != productIdToRemove)
         setCart([...copyCart,{product:cart[index].product, quantity:cart[index].quantity-1}])
       }
+      window.localStorage.setItem(user+"cart", JSON.stringify(cart))
+    }
+
+    const setFullCart = (fullCart) =>{
+      setCart(fullCart)
     }
 
     useEffect (()=> {
@@ -55,7 +62,7 @@ export const ProductContextProvider = ({children}) => {
     }, [])
 
     return(
-      <productContext.Provider value={{products, isLoading, error, sortedAsc, handleSort, query, handleQuery, cart, addToCart, removeToCart }}>
+      <productContext.Provider value={{products, isLoading, error, sortedAsc, handleSort, query, handleQuery, cart, addToCart, removeToCart, setFullCart }}>
         {children}
       </productContext.Provider>
     )

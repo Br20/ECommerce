@@ -14,7 +14,7 @@ const ProductsList = ({filter}) => {
   if (isLoading) 
     return (
       <div className="products-page-div" >
-        <SyncLoader color="#702d21" />
+        <SyncLoader color="#702d21" size={30}/>
       </div>
     )
   return (

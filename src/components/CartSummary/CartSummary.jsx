@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { productContext } from "../../context/ProductContext";
 import { NavLink } from "react-router-dom";
 import "./CartSummary.css"
@@ -6,6 +6,9 @@ import { FaCartShopping } from "react-icons/fa6";
 
 const CartSummary = () => {
     const { cart } = useContext(productContext)
+    useEffect(()=>{
+        console.log("se actualizo carrito")
+    },[cart])
     return (
         <div className="cartSummaryContainer">
             <NavLink to="/cart">
