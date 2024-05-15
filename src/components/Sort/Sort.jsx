@@ -5,13 +5,13 @@ import { BsSortNumericDown, BsSortNumericDownAlt } from "react-icons/bs";
 const Sort = () => {
   const {sortedAsc , handleSort} = useContext(productContext)
   return (
-    <div>
+    <>
         {sortedAsc ?(
           <BsSortNumericDown style={{fontSize:"2rem", color:"#fffffe"}} onClick={()=>handleSort()}/>
         ): (
           <BsSortNumericDownAlt style={{fontSize:"2rem", color:"#fffffe"}} onClick={()=>handleSort()}/>
-        )}
-    </div>
+      )}
+    </>  
   )
 };
 

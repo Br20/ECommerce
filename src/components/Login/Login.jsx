@@ -10,20 +10,22 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault() 
     loginUser(e.target)
-    if (!user) setTimeout(() => navigate('/home'), 1000)
+    if (!user) setTimeout(() => navigate('/'), 1000)
   }
 
   return (
-    <div className="login-container">
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="">Email</label>
-            <input type="text" name="email"/>
-            <label htmlFor="">Password</label>
-            <input type="password" name="password"/>
-            <input type="submit" value="Log In" />
-            <NavLink to={"/register"}>{"Sign Up"}</NavLink>
-        </form>
-    </div>
+    <section className="section-login">
+      <div className="login-container">
+          <form onSubmit={handleSubmit}>
+              <label htmlFor="email">Email</label>
+              <input type="text" name="email" id="email"/>
+              <label htmlFor="password">Password</label>
+              <input type="password" name="password" id="password"/>
+              <input type="submit" value="Log In" />
+              <NavLink to={"/register"}>{"Sign Up"}</NavLink>
+          </form>
+      </div>
+    </section>
   )
 };
 

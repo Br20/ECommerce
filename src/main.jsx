@@ -17,25 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <UserContextProvider>
         <ProductContextProvider>
-          <Routes>
-              <Route path="/" element={<App />} >
-
-              <Route path="/home" element={<Home/>} />
-
-                <Route path="/cart" element={<Cart/>} />
-
-                <Route path="/products" element={<ProductsList/>}>
-                    <Route path=":productId" element={<h1>ProductIdddd</h1>}/>
-                </Route>
-
-                <Route path="/login" element={<Login/>} />
-
-                <Route path="/register" element={<Register/>} />
-
-                <Route path="/*" element={<h1>404 - Not Found</h1>} />
-
-              </Route>
-          </Routes>
+          <App />
         </ProductContextProvider>
       </UserContextProvider>
     </BrowserRouter>

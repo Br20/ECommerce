@@ -2,6 +2,7 @@ nav {
     background-color: #333;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
   
   nav a {
@@ -16,3 +17,11 @@ nav {
     color: black;
   }
   
+  .logOut-nav{
+    color: tomato;
+  }
+
+  .logOut-nav:hover {
+    background-color: rgb(247, 193, 184);
+    color: black;
+  }

@@ -1,11 +1,17 @@
 footer {
     background-color: #333; /* Cambia el color de fondo según tus preferencias */
-    color: #fff; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
+    color: #ffe; /* Color del texto */
     text-align: center; /* Alineación del texto al centro */
     position: fixed; /* Fija el footer en la parte inferior de la pantalla */
-    width: auto;
+    width: 100%;
     bottom: 0; /* Coloca el footer en la parte inferior de la página */
-  }
+    margin-top: 20px;
+    height: 30px;
+}
   
+
+footer p{
+  padding: 0;
+  margin: 0;
+}
   

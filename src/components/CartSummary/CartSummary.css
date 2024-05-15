@@ -1,3 +1,8 @@
 .cartSummaryContainer{
     height: 40px;
 }
+
+.cartSummaryContainer{
+    height: 40px;
+    width: 10%;
+}

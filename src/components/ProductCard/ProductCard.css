@@ -13,7 +13,7 @@ article {
 }
 
 /* Estilos para el título del producto */
-article h3 {
+article a {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.2em;
@@ -25,7 +25,6 @@ article img {
     max-width: 50%; 
     height: 200px;
     width: auto;
-    object-fit: cover;
     display: block;
     margin-bottom: 10px;
 }

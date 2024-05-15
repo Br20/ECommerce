@@ -1,0 +1,41 @@
+.product-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 60%;
+  }
+  
+  .product-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .product-info {
+    flex: 1;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    color: #666666;
+    margin-bottom: 10px;
+  }
+  
+  .product-category {
+    font-size: 16px;
+    color: #bbbbbb;
+    margin-bottom: 5px;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    color: #bbbbbb;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    color: #f5f5f5;
+  }
+  

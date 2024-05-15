@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <header>
         <div>
-            <img src={ logo } alt="Logo mercado restrictivo" />
-            <h1>Mercado Restrictivo</h1>
+            <img src={ logo } alt="Black Market Logo" />
+            <h1>Black Market</h1>
         </div>
         <NavBar />
     </header>
